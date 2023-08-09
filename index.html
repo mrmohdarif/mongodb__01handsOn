@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .command{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>1.Query the collection "employee" and list all the document<h1>
+        <p class="command"> command:-db.employee.find()</p>
+       
+
+
+        <h1>2.Query the collection "employee" and list the employee who are having salary more than 30000 ?</h1>
+        <h2 class="command"> command:-db.employee.find({"salary":{"$gt":"30000"}})</h2>
+     
+        
+        <h1>3.Query the collection "employee" and list the employee who are having  experience more than 2 year</h1>
+        <h2 class="command">db.employee.find({"salary":{"$gt":"30000"}})</h2>
+         
+        <h1>4.Query the collection "employee" and list the employee who are graduate  after 2015 and having experience more than 1</h1>
+        <h2 class="command">db.employee.find({"yearGrad":{"$gte":"2015"},"overallExp":{"$gt":"1"}})</h2>
+         
+
+         <h1>5.Query the collection "employee" and update the salary of the employee whose salary is greater than 70000 to 65000</h1>
+          <h2 class="command">db.employee.updateMany({"salary":{"$gt":"70000"}},{$set:{"salary":"65000"}})</h2>
+          <h1>6.delete all  the document from "employee" where last companey y</h1>
+          <h2 class="command">db.employee.deleteMany({"lastCompany":"Y"})</h2>
+          <script src="script.js"></script>
+</body>
+</html>
